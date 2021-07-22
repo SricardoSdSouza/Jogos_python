@@ -101,7 +101,7 @@ while True:
 if vencedor == 1:
     print("\033[1;34mParabéns!!!, Você Ganhou you win!!! :)\033[m")
 elif vencedor == 2:
-    print("\033[1;32mVocê Perdou, O computador WIN!!!!!\033[m")
+    print("\033[1;32mVocê Perdeu, O Computador WIN!!!!!\033[m")
 else:
     print("Deu Jogo da Velha, Ninguém ganhou!!! :(")
 
