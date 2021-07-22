@@ -99,9 +99,9 @@ while True:
 
     imprime_grid(grid)
 if vencedor == 1:
-    print("Parabéns!!!, Você Ganhou you win!!! :)")
+    print("\033[1;34mParabéns!!!, Você Ganhou you win!!! :)\033[m")
 elif vencedor == 2:
-    print("Você Perdou, O computador WIN!!!!!")
+    print("\033[1;32mVocê Perdou, O computador WIN!!!!!\033[m")
 else:
     print("Deu Jogo da Velha, Ninguém ganhou!!! :(")
 
