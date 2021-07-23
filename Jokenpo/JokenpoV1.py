@@ -23,19 +23,19 @@ while vez < 3 :
         print( '\033[1;34mVocê ganhou!\033[m')
         print('-' * 30)
     elif escolha_jogador == 'PEDRA' and escolha_computador == 'PAPEL':
-        print( '\033[1;32mComputador ganhou!\033[m')
+        print( '\033[0;30;41mComputador ganhou!\033[m')
         print('-' * 30)
     elif escolha_jogador == 'TESOURA' and escolha_computador == 'PAPEL':
         print( '\033[1;34mVocê ganhou!\033[m')
         print('-' * 30)
     elif escolha_jogador == 'TESOURA' and escolha_computador == 'PEDRA':
-        print( '\033[1;32mComputador ganhou!\033[m')
+        print( '\033[0;30;41mComputador ganhou!\033[m')
         print('-' * 30)
     elif escolha_jogador == 'PAPEL' and escolha_computador == 'PEDRA':
         print( '\033[1;34mVocê ganhou!\033[m')
         print('-' * 30)
     elif escolha_jogador == 'PAPEL' and escolha_computador == 'TESOURA':
-        print( '\033[1;32m computador ganhou!\033[m')
+        print( '\033[0;30;41m computador ganhou!\033[m')
         print('-' * 30)
     vez += 1
 
