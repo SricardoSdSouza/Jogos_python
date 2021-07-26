@@ -1,20 +1,22 @@
 import random
-palavras = ['computador', 'cachorro','mulher','Brasil','parede','galinha','periquito','canarinho','fogo','madeira','pipoca']
+palavras = ['COMPUTADOR', 'CACHORRO','MULHER','BRASIL','PAREDE','GALINHA','PERIQUITO','CANARINHO','FOGO','MADEIRA','PIPOCA',
+            'RADIO','VIDEO','SOFA','IMPRESSORA','COPO']
 palavra = random.choice(palavras)
 #print(palavra)
 tentativas = 0
-chances = len(palavra)
+chances = 5 #len(palavra)
 letras_escolhidas = []
 estado_atual = ['_'] * len(palavra)
 print('BEM VINDO AO JOGO DA FORCA')
 print('Seu objetivo é tentar acertar a palavra escolhida pelo computador!!')
 print(f'Você terá {chances} chances!!!!')
 while tentativas < chances and ''.join(estado_atual) != palavra:
-    letra = input('\nQual letra você quer tentar? : ')
+    letra = input('\nQual letra você quer tentar? : ').upper()
     while letra in letras_escolhidas:
-        print('Você ja escolheu esta letra, tente outra!!!')
+        print('\033[7;30mVocê ja escolheu esta letra, tente outra!!!\033[m')
+        letra = input('\nQual letra você quer tentar? : ').upper()
     letras_escolhidas.append(letra)
-    if letra in palavra:
+    if letra in palavra.upper():
         print('Parabéns você acertou a letra !!')
         for i in range(len(palavra)):
             if letra == palavra[i]:
@@ -30,7 +32,11 @@ while tentativas < chances and ''.join(estado_atual) != palavra:
     print(f'\033[1;34mAs letras que você escolheu foram :\033[m {letras_escolhidas}')
 
 if tentativas == chances:
-    print('\033[7;30mGame over, esgotaram suas tentativas !!!! :(\033[m')
+    print('!' * 50)
+    print('\033[0;30;41mGame over, esgotaram suas tentativas !!!! :( \033[m')
+    print('!' * 50)
 else:
-    print('\033[0;31;44mYou WIN !!!! Congratulations\033[m')
-print(f'A palvra foi {palavra}')
+    print('*' * 30)
+    print('\033[0;36mYou WIN !!!! Congratulations\033[m')
+    print('*' * 30)
+print(f'A palvra era {palavra}')
